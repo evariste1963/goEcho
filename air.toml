@@ -1,0 +1,21 @@
+# Config file for Air live reload
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  bin = "tmp/main"
+  cmd = "go build -o tmp/main"
+  include_ext = ["go", "html", "css", "js"]
+  exclude_dir = ["tmp", "vendor"]
+  exclude_file = ["air.toml"]
+  follow_symlink = true
+  delay = 1000 # Delay in milliseconds
+
+[log]
+  time = true
+
+[serve]
+  cmd = "tmp/main"
+  grace = 500
+  delay = 1000
+

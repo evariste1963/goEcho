@@ -1,2 +1,4 @@
 tmp/
 *.exe
+go.mod
+go.sum
